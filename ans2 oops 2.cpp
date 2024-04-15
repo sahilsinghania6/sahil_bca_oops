@@ -29,25 +29,25 @@ public:
   }
 
   void displayDetails() {
-    student.displayStudentInfo(); // Call base class function to display student info
+    student.displayStudentInfo();
     std::cout << "Route: " << route << std::endl;
     std::cout << "Bus Fee: " << busFee << std::endl;
   }
 
 private:
-  Student student; // Composition: Transport HAS-A Student
+  Student student;
   std::string route;
   int busFee;
 };
 
 int main() {
-  // Create a Student object
+  
   Student student1("John Doe", 18, "New York");
 
-  // Create a Transport object using the Student object
+  
   Transport transport(student1, "School Bus - Route 10", 30);
 
-  // Display complete student details including transport info
+  
   transport.displayDetails();
 
   return 0;
